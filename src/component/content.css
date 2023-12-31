@@ -1,0 +1,67 @@
+.content-container{
+	border-radius: 15px;
+	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+	padding: 33px 24px;
+}
+.img-avatar{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-top: 12px;
+}
+.img-avatar img{
+	border-radius: 70px;
+}
+.main-info{
+	margin-left: 90px;
+}
+.user-name{
+	font-size: 1.066rem;
+}
+.user-login{
+	color: #0079FF;
+	font-size: 0.86rem;
+	line-height: normal;
+}
+.Joined{
+	font-size: 0.866rem;
+}
+.bio{
+	margin: 34px 0 24px 0;
+}
+.info-account{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 10px;
+	padding: 18px 0;
+}
+.info-account span{
+	display: block;
+	text-align: center;
+}
+.contact{
+	margin-top: 24px;
+	margin-bottom: 49px;
+}
+.icon-contact{
+	margin: 17px 0;
+	display: flex;
+	text-decoration: none;
+	color: inherit;
+}
+.icon-contact:hover {
+	text-decoration: underline;
+}
+.icon-contact:first-child:hover {
+	text-decoration: none;
+}
+.icon-contact span{
+	margin-left: 20px;
+}
+.icon-contact:first-child{
+	margin-top: 0;
+}
+.icon-contact:last-child{
+	margin-bottom: 0;
+}
