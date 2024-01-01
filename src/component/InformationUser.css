@@ -1,0 +1,121 @@
+.content-container {
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  padding: 33px 24px;
+}
+.img-avatar {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-top: 12px;
+}
+.img-avatar img {
+  border-radius: 70px;
+}
+.main-info {
+  margin-left: 90px;
+}
+.user-name {
+  font-size: 1.066rem;
+}
+.user-login {
+  color: #0079ff;
+  font-size: 0.86rem;
+  line-height: normal;
+}
+.Joined {
+  font-size: 0.866rem;
+}
+.bio {
+  margin: 34px 0 24px 0;
+}
+.bio-empty {
+  opacity: 0.75;
+}
+.info-account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding: 18px 0;
+}
+.info-account span {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.066rem;
+  margin-top: 8px;
+}
+.contact {
+  margin-top: 24px;
+  margin-bottom: 49px;
+}
+.contact .icon {
+  margin: 17px 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.contact .icon::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 13px;
+}
+.contact .location::before {
+  background: center url(../assets/icon-location.svg) no-repeat;
+}
+.contact .blog::before {
+  background: center url(../assets/icon-website.svg) no-repeat;
+}
+.contact .twitter::before {
+  background: center url(../assets/icon-twitter.svg) no-repeat;
+}
+.contact .company::before {
+  background: center url(../assets/icon-company.svg) no-repeat;
+}
+.icon:hover {
+  text-decoration: underline;
+}
+.icon:first-child:hover {
+  text-decoration: none;
+}
+
+.icon:first-child {
+  margin-top: 0;
+}
+.icon-contact:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .content-container {
+    padding: 40px 30px;
+  }
+  .info-account span {
+    font-size: 1.466rem;
+  }
+  .contact .icon {
+    display: inline-block;
+    width: 50%;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .info-profil {
+    margin-left: 155px;
+  }
+  .main-info {
+    margin-left: 0;
+  }
+  .img-avatar {
+    width: 117px;
+    height: 117px;
+    float: left;
+    margin-top: 0;
+  }
+  .content-container {
+    padding: 48px;
+  }
+}

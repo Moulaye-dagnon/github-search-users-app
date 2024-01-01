@@ -1,42 +1,40 @@
-.Input{
-	position: relative;
-	margin: 35px 0 24px ;
-	}
-.Input input{
-	width: 100%;
-	padding: 19px 0 19px 50px ;
-	height: 100%;
-	border-radius: 15px;
-	border: none;
-	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
-
+.Input {
+  position: relative;
+  margin: 35px 0 24px;
 }
-.Input label{
-	position: absolute;
-	top:  18px;
-	left: 16px;
-	
+.Input input {
+  width: 100%;
+  padding: 19px 0 19px 50px;
+  height: 100%;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
-.Input span{
-	position: absolute;
-	color: #F74646;
-	font-weight: 700;
-	right: 130px;
-	top: 18px;
+.Input label {
+  position: absolute;
+  top: 18px;
+  left: 16px;
 }
-.Input button{
-	position: absolute;
-	right: 0;
-	padding: 11px 15px ;
-	top: 5px;
-	margin-right: 5px;
-	border-radius: 10px ;
-	background-color: #0079FF;
-	border: none;
-	color: #fff;
-	transition: .1s;
+.Input span {
+  position: absolute;
+  color: #f74646;
+  font-weight: 700;
+  right: 130px;
+  top: 18px;
 }
-.Input button:hover{
-	background-color: #60ABFF;
-	transform:scale(0.9);
+.Input button {
+  position: absolute;
+  right: 0;
+  padding: 11px 15px;
+  top: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: #0079ff;
+  border: none;
+  color: #fff;
+  transition: 0.1s;
+}
+.Input button:hover {
+  background-color: #60abff;
+  transform: scale(0.9);
 }

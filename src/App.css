@@ -1,35 +1,39 @@
-.Container{
-	padding: 24px;
-	margin: 20px auto;
-	max-width: 730px;
+.Container {
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 730px;
 }
-.Header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .Header .Mode {
-	display: flex;
+  display: flex;
 }
 .Header .Mode button {
-	border: none;
-	margin-left: 16px;
-	background-color: transparent;
+  border: none;
+  margin-left: 16px;
+  background-color: transparent;
 }
-.Header .Mode-Moon{
-	color: #4B6A9B;
-	opacity: .8;
-
+.Header .Mode-Moon {
+  color: #4b6a9b;
+  opacity: 0.8;
 }
-.Header .Mode-Moon:hover{
-	color: #222731 ;
-	opacity: 1;
+.Header .Mode-Moon:hover {
+  color: #222731;
+  opacity: 1;
 }
-.Header .Mode-Sun{
-	color: #FFFFFF;
-	opacity: .8;
+.Header .Mode-Sun {
+  color: #ffffff;
+  opacity: 0.8;
 }
-.Header .Mode-Sun:hover{
-	color: #90A4D4 ;
-	opacity: 1;
+.Header .Mode-Sun:hover {
+  color: #90a4d4;
+  opacity: 1;
+}
+@media only screen and (min-width: 1440px) {
+  .Container {
+    margin: 100px auto 0;
+  }
 }
