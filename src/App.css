@@ -1,5 +1,7 @@
 .Container{
 	padding: 24px;
+	margin: 20px auto;
+	max-width: 730px;
 }
 .Header{
 	display: flex;
@@ -13,4 +15,21 @@
 	border: none;
 	margin-left: 16px;
 	background-color: transparent;
+}
+.Header .Mode-Moon{
+	color: #4B6A9B;
+	opacity: .8;
+
+}
+.Header .Mode-Moon:hover{
+	color: #222731 ;
+	opacity: 1;
+}
+.Header .Mode-Sun{
+	color: #FFFFFF;
+	opacity: .8;
+}
+.Header .Mode-Sun:hover{
+	color: #90A4D4 ;
+	opacity: 1;
 }

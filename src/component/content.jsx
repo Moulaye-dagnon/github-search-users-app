@@ -8,7 +8,7 @@ export function Content({body, Mode}){
 		background : Mode ? '#fff' : '#1E2A47' ,
 		color : Mode ? '#4B6A9B' : '#FFF'	
 	 }
-	const username = body.name != "" ? body.name : body.login
+	const username = body.name  ? body.name : body.login
 	 const d = body.created_at
 	const dateC = new Date(d.split("T")[0]) 
 	var format = {
@@ -30,7 +30,7 @@ export function Content({body, Mode}){
 						</div>
 						<p className='Joined'>{date}</p>
 					</div>
-					<p className='bio'>
+					<p className={`bio ${!body.bio ? "bio-empty": ""}`} >
 						{body.bio ?  body.bio : 'This profile has no bio'}
 					</p>
 					<div className='info-account' style={{	background : Mode ?'#F6F8FF' : '#141D2F' ,}}>
@@ -39,30 +39,18 @@ export function Content({body, Mode}){
 						<p>Following <span>{body.following}</span></p>
 					</div>
 					<div className='contact'>
-						<div  className='icon-contact' style={{opacity: !body.location ? '0.4' :'1' }}>
-							<img src={Iconlocation} alt="" />
-							<span>
+						<div  className='icon location' style={{opacity: !body.location ? '0.4' :'1' }}>
 								{body.location ?  body.location : 'Not Available'}
-							</span>
 						</div>
-						<a href={body.blog ? body.blog : ''} className='icon-contact' style={{opacity: !body.blog ? '0.4' :'1' }}>
-							<img src={Iconwebsite} alt="" />
-							<span>
+						<a href={body.blog ? body.blog : ''} className='icon blog' style={{opacity: !body.blog ? '0.4' :'1' }}>
 								{body.blog ?  body.blog : 'Not Available'}
-							</span>
-						</a >
-						<a href={body.twitter_username ? body.twitter_username : ''} className='icon-contact'  style={{opacity: !body.twitter_username ? '0.4' :'1' }}>
-							<img src={Icontwitter} alt="" />
-							<span>
+						</a>
+						<a href={body.twitter_username ? body.twitter_username : ''} className='icon twitter'  style={{opacity: !body.twitter_username ? '0.4' :'1' }}>
 								{body.twitter_username ?  body.twitter_username : 'Not Available'}
-							</span>
-						</a >
-						<a href='https://github.com/github' className='icon-contact' style={{opacity: !body.company ? '0.4' :'1' }}>
-							<img src={Iconcompany} alt="" />
-							<span>
-								{body.company ?  body.company : 'Not Available'}
-							</span>
-						</a >
+						</a>
+						<a href={body.company ? `https://github.com/${body.company.replace('@', '')}` : 'Not Available'} className='icon company' style={{opacity: !body.company ? '0.4' :'1' }}>
+								{body.company ?  body.company.replace('@', '') : 'Not Available'}
+						</a>
 					</div>
 
 				</div>

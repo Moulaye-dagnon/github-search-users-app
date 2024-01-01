@@ -1,10 +1,10 @@
 .Input{
 	position: relative;
-	margin: 12px 0;
+	margin: 35px 0 24px ;
 	}
 .Input input{
 	width: 100%;
-	padding: 19px 0 19px 45px ;
+	padding: 19px 0 19px 50px ;
 	height: 100%;
 	border-radius: 15px;
 	border: none;
@@ -17,6 +17,13 @@
 	left: 16px;
 	
 }
+.Input span{
+	position: absolute;
+	color: #F74646;
+	font-weight: 700;
+	right: 130px;
+	top: 18px;
+}
 .Input button{
 	position: absolute;
 	right: 0;
@@ -27,8 +34,9 @@
 	background-color: #0079FF;
 	border: none;
 	color: #fff;
-
+	transition: .1s;
 }
 .Input button:hover{
 	background-color: #60ABFF;
+	transform:scale(0.9);
 }

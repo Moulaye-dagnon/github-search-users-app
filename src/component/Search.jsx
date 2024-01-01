@@ -1,7 +1,7 @@
 import './Search.css'
 import IconSearch from '../assets/icon-search.svg'
 import { useState } from 'react'
-export function Search({onChange, Mode }){
+export function Search({onChange, Mode , ErrorFound}){
 	const [Inputvalue,setInputvalue] = useState('')
 	 const handleSubmit = (e)=>{
 		e.preventDefault()
@@ -15,6 +15,7 @@ export function Search({onChange, Mode }){
 		<label htmlFor="Icon_search">
 			<img src={IconSearch} alt="" />
 		</label>
+		{ErrorFound && <span>Not result</span> }
 		<input type="text"
 		id='Icon_search'
 		placeholder='Search GitHub username…'

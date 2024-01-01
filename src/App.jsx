@@ -9,12 +9,15 @@ function App() {
   const [Mode, setMode] = useState(true);
   const [Inputvalue, setInputvalue] = useState("");
   const username = Inputvalue != "" ? Inputvalue : "octocat";
-  const { data, loading } = UseFetch(
+  const { data,Errorfound  } = UseFetch(
     `https://api.github.com/users/${username} `
   );
+    console.log(Errorfound)
+
   const handlechangeMode = () => {
     setMode(!Mode);
   };
+  
 
   const style = {
     backgroundColor: Mode ? "#F6F8FF" : "#141D2F",
@@ -24,17 +27,17 @@ function App() {
     <div className="Container" style={style}>
 		<header className="Header">
 				<h1>devfinder</h1>
-				<div className="Mode">
+				<div className={Mode ? "Mode Mode-Moon" :"Mode Mode-Sun"} >
 					{Mode ? "Dark" : "Light"}
 					<button className="Mode" onClick={handlechangeMode}>
-						{!Mode && <img src={IconSun} alt="Icon of the sun" />}
-						{Mode && <img src={IconMoon} alt="Icon of the moon" />}
+						{!Mode && <img src={IconSun}  alt="Icon of the sun" />}
+						{Mode && <img src={IconMoon}  alt="Icon of the moon" />}
 					</button>
 				</div>
 		</header>
       <main>
-			<Search onChange={setInputvalue} Mode={Mode} />
-			{!loading && <Content body={data} Mode={Mode} />}
+			<Search onChange={setInputvalue} Mode={Mode} ErrorFound={Errorfound} />
+			{data  &&   <Content body={data} Mode={Mode} />}
       </main>
     </div>
   );
