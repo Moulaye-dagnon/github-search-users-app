@@ -102,7 +102,7 @@
     flex-wrap: wrap;
   }
 }
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1100px) {
   .info-profil {
     margin-left: 155px;
   }
