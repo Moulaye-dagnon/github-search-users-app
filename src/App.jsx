@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import IconMoon from "./assets/icon-moon.svg";
 import IconSun from "./assets/icon-sun.svg";
 import { Search } from "./component/Search";
 import { UseFetch } from "./Hooks/usefetch";
-import {  InformationUser } from "./component/InformationUser";
+import { InformationUser } from "./component/InformationUser";
 function App() {
   const [Mode, setMode] = useState(true);
   const [Inputvalue, setInputvalue] = useState("");
@@ -12,8 +12,13 @@ function App() {
   const { data, Errorfound } = UseFetch(
     `https://api.github.com/users/${username} `
   );
-  console.log(Errorfound);
-
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setMode(false);
+    } else {
+      setMode(true);
+    }
+  }, []);
   const handlechangeMode = () => {
     setMode(!Mode);
   };

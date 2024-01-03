@@ -6,16 +6,16 @@ export function InformationUser({ body, Mode }) {
   };
   const username = body.name ? body.name : body.login;
   const dateAndTime = body.created_at;
-  const dateOnly = new Date(dateAndTime.split("T")[0]);
-  var format = {
+  const format = {
     year: "numeric",
     month: "short",
     day: "numeric",
   };
-  const dateUser = dateOnly
-    .toLocaleDateString("fr", format)
+  const dateUser = new Date(dateAndTime)
+  	.toLocaleDateString("fr", format)
     .trim()
     .toUpperCase();
+
 
   return (
     <div style={style} className="content-container">
